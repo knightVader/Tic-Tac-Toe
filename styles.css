@@ -1,19 +1,62 @@
 body{
+    position: relative;
     height: 100vh;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #392F5A;
+    background-color: #3C7A89;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+.dark-body{
+    background-color: black;
+}
+
+header{
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    display: flex;
+    justify-content: right;
+}
+
+.icon-sun{
+    color: white;
+}
+
+
+.head-mode{
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.head:hover{
+    width: 35px;
+    height: 35px;
+}
+
 h1{
     color: #f4d06f;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "Nerko One", cursive;
+    font-weight: 900;
+    font-style: normal;
     font-size: 40px;
+}
+
+.playmsg{
+    font-family: "Comic Neue", cursive;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d90429;
 }
 
 .game{
@@ -32,35 +75,132 @@ h1{
     background-color: #faf3dd;
     border: none;
     margin: 5px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 1rem;
 }
 
-.reset{
+.reset, .ngame{
+    font-family: "Comic Neue", cursive;
     background-color: #f40000;
     color: #ffffff;
     margin-top: 35px;
-    height: 35px;
-    width: 100px;
+    height: 40px;
+    width: 175px;
     border: none;
     border-radius: 8px;
     font-size: 20px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 600;
 }
 
-.winner{
+.intro{
+    border-radius: 20px;
+    position: absolute;
+    background-color: rgb(46, 71, 86, 0.95);
+    height: 75%;
+    width: 95%;
     color: #EDFFAB;
     font-size: 36px;
-    display: flex;
-    align-items:center;
-    justify-content:center;
+    font-family: "Comic Neue", cursive;
+    font-weight: 600;
     margin-left: 30px;
     margin-right: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pone, .ptwo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 40px;
+}
+
+#play1, #play2{
+    margin-top: 20px;
+    height: 30px;
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    font-family: "Comic Neue", cursive;
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bparent{
+    display: flex;
+    justify-content: center;
+}
+
+.sbtn{
+    font-family: "Comic Neue", cursive;
+    font-weight: 900;
+    font-size: 20px;
+    background-color: #D2042D;
+    color: #14213D;
+    border: none;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.sbtn:hover{
+    height: 35px;
+    width: 105px;
+}
+
+.winner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "Comic Neue", cursive;
+    font-weight: 900;
+    font-size: 30px;
+    color: #16262E;
+    text-align: center;
+    padding: 10px;
+    align-items: center;
+    position: absolute;
+    height: 75%;
+    width: 90%;
+    border-radius: 20px;
+    background-color: rgb(159, 162, 178, 0.95);
+}
+
+.btn2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .hide{
-
     display: none;
+}
+
+.footer{
+    font-family: "Comic Neue", cursive;
+    font-weight: 900;
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #16262E;
+    color: #f4d06f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-dark{
+    background-color: #f4d06f;
+    color: #14213D;
+    font-family: "Comic Neue", cursive;
+    font-weight: 900;
+    font-size: 14px;
 }

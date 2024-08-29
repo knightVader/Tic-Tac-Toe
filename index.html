@@ -4,13 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
+    <link rel="icon" type="image/png" href="./tic-tac-toe.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="winner hide">
-        <p id="msg">Congratulations! The Winner is </p>
+    <header>
+        <div class="head-mode">
+            <i class="fa-solid fa-moon icon-moon"></i>
+            <i class="fa-solid fa-sun icon-sun hide"></i>
+        </div>
+    </header>
+    <div class="intro">
+        <form>
+            <div class="pone">
+                <label for="play1">Player-1</label>
+                <input type="text" id="play1" placeholder="Enter Your Name" autocomplete="off" required>
+            </div>
+
+            <div class="ptwo">
+                <label for="play2">Player-2</label>
+                <input type="text" id="play2" placeholder="Enter Your Name" autocomplete="off" required>
+            </div>
+
+            <div class="bparent">
+                <input type="submit" class="sbtn">
+            </div>
+        </form>
     </div>
+
+    <div class="winner hide">
+        <div class="messages">
+            <p id="msg">The Winner</p>
+            <p id="p1score">Player 1 Score is</p>
+            <p id="p2score">Player 2 Score is</p>
+        </div>
+        <div class="btn2">
+            <button class="ngame">New Game</button>
+            <button class="reset">Restart</button>
+        </div>
+    </div>
+
     <h1>Tic-Tac-Toe</h1>
+    <p class="playmsg"></p>
     <div class="container">
         <div class="game">
             <div class="block">
@@ -30,7 +66,10 @@
             </div>
         </div>
     </div>
-    <button class="reset">Reset</button>
+
+    <div class="footer">
+        <p>Created By Vaibhav Sharma</p>
+    </div>
 
     <script src="app.js"></script>
 </body>
